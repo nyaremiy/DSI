@@ -1,0 +1,35 @@
+.c-navigation {
+  @include media('<=940px') {
+    background-color: $c-gunmetal;
+    position: absolute;
+    display: none;
+    width: 300px;
+    bottom: 0;
+    right: 0;
+    top: 0;
+  }
+  @include media('<=phone') {
+    width: auto;
+    left: 0;
+  }
+  &--show {
+    display: block;
+  }
+  &__list {
+    align-items: center;
+    display: flex;
+    @include media('<=940px') {
+      flex-direction: column;
+      margin-top: 90px;
+    }
+  }
+  &__item {
+    margin-right: 40px;
+    @include media('<=940px') {
+      margin: 0 0 5px 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

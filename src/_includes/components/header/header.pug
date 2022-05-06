@@ -1,0 +1,22 @@
+mixin header() 
+  header.c-header
+    .container.c-header__wrapper
+      .c-header__logo
+        a.e-link(href="./") 
+          +logo
+      .c-header__block
+        .c-header__navigation 
+          +navigation 
+        .c-header__icons
+          a.e-link.e-link--icon(href="#") 
+            svg.icon.c-header__icon
+              use(xlink:href='#icon-home')
+          a.e-link.e-link--icon(href="#")
+            svg.icon.c-header__icon
+              use(xlink:href='#icon-mail')
+          a.e-link.e-link--icon(href="#")
+            svg.icon.c-header__icon
+              use(xlink:href='#icon-shuffle')
+        +burger
+
+

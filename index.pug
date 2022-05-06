@@ -1,5 +1,14 @@
 extends ./src/_extends/common
 
+block title 
+  title DCI
+
+block styles
+  link(rel="shortcut icon" href="./assets/images/favicon/favicon.ico" type="image/x-icon")
+  link(rel="stylesheet" href="./index.css")
+
 block main 
   .app
-    
+    +header
+block scripts 
+  script(src="./index.js" type="module") 

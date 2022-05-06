@@ -1,0 +1,28 @@
+.c-header {
+  &__wrapper {
+    justify-content: space-between;
+    padding-bottom: 25px;
+    align-items: center;
+    padding-top: 25px;
+    display: flex;
+  }
+  &__icons {
+    margin-left: 40px;
+    display: flex;
+    z-index: 1;
+    @include media('<=940px') {
+      margin-right: 50px;
+    }
+  }
+  &__icon {
+    color: rgba($c-gunmetal, 0.8);
+    font-size: 20px;
+    &--active {
+      color: $c-white;
+    }
+  }
+  &__block {
+    align-items: center;
+    display: flex;
+  }
+}

@@ -4,6 +4,7 @@
   margin: 0;
 }
 body {
+  font-family: $ff-base;
   font-size: $fs-base + px;
 }
 li {
@@ -15,7 +16,7 @@ a {
 img {
   width: 100%;
 }
-p{
+p {
   margin: 0;
   padding: 0;
 }
@@ -28,4 +29,16 @@ h6 {
   font-size: inherit;
   font-weight: 400;
   margin: 0;
+}
+.container {
+  @include maxCentered(1200, 12);
+  min-width: 270px;
+}
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }

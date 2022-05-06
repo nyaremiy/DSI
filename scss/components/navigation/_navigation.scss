@@ -1,7 +1,7 @@
 .c-navigation {
   @include media('<=940px') {
     background-color: $c-gunmetal;
-    position: absolute;
+    position: fixed;
     display: none;
     width: 300px;
     bottom: 0;

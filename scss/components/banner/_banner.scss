@@ -1,0 +1,84 @@
+.c-banner {
+  &__wrapper {
+    padding-bottom: 80px;
+    @include flexLine();
+    padding-top: 220px;
+    @include media('<=desktop') {
+      justify-content: space-evenly;
+      padding-top: 135px;
+    }
+    @include media('<=tablet') {
+      flex-direction: column;
+    }
+  }
+  &__block {
+    max-width: 590px;
+    margin-right: 10px;
+    @include media('<=desktop') {
+      max-width: 450px;
+    }
+    @include media('<=tablet') {
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+  &__title {
+    font-family: 'Poppins', sans-serif;
+    color: $c-medium-jungle-green;
+    line-height: 70px;
+    font-weight: 700;
+    font-size: 48px;
+    @include media('<=desktop') {
+      line-height: 34px;
+      font-size: 22px;
+    }
+    @include media('<=tablet') {
+      text-align: center;
+      line-height: 45px;
+      max-width: 470px;
+      font-size: 36px;
+      margin: 0 auto;
+    }
+    @include media('<=phone') {
+      line-height: 30px;
+      font-size: 22px;
+    }
+  }
+  &__desc {
+    color: $c-charcoal;
+    line-height: 30px;
+    margin-top: 25px;
+    font-size: 20px;
+    @include media('<=desktop') {
+      line-height: 25px;
+      margin-top: 22px;
+      font-size: 14px;
+    }
+    @include media('<=tablet') {
+      text-align: center;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 520px;
+      font-size: 18px;
+    }
+  }
+  &__button {
+    margin-top: 25px;
+    @include media('<=tablet') {
+      text-align: center;
+    }
+  }
+  &__image-box {
+    width: 100%;
+    max-width: 560px;
+    @include media('<=desktop') {
+      min-width: 400px;
+      max-width: 400px;
+    }
+    @include media('<=tablet') {
+      margin-top: 30px;
+      max-width: 650px;
+      min-width: 0px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.c-product-and-service {
+  &__wrapper {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+  &__title {
+    color: $c-medium-jungle-green;
+    text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+    @include media('<=desktop') {
+      font-size: 24px;
+    }
+  }
+  &__block-cards {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+    grid-gap: 50px;
+    display: grid;
+    @include media('<=tablet') {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

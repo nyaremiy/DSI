@@ -1,0 +1,15 @@
+mixin card(svgUrl, title, desc)
+  .c-card
+    .c-card__wrapper
+      .c-card__image
+        case svgUrl
+          when 'product'
+            include ../../../../assets/images/svg/product.svg
+          when 'service'
+            include ../../../../assets/images/svg/service.svg
+          when 'technology'
+            include ../../../../assets/images/svg/technology.svg
+      h3.c-card__title= title
+      .c-card__desc= desc
+      .c-card__button 
+        +button('button','e-button--card','Read More')

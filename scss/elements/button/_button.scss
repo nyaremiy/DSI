@@ -11,4 +11,8 @@
   @include media('<=tablet') {
     height: 35px;
   }
+  &--card {
+    padding: 0 16px;
+    height: 40px;
+  }
 }

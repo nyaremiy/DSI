@@ -657,6 +657,7 @@ h6 {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     padding-top: 135px;
+    padding-bottom: 150p;
   }
 }
 
@@ -805,6 +806,12 @@ h6 {
   max-width: 575px;
 }
 
+@media (max-width: 768px) {
+  .c-welcome-to__block {
+    max-width: 1024px;
+  }
+}
+
 .c-welcome-to__title {
   line-height: 40px;
   font-weight: 500;
@@ -861,6 +868,101 @@ h6 {
   }
 }
 
+.c-product-and-service__wrapper {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.c-product-and-service__title {
+  color: #1f2e35;
+  text-align: center;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+@media (max-width: 1024px) {
+  .c-product-and-service__title {
+    font-size: 24px;
+  }
+}
+
+.c-product-and-service__block-cards {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin-top: 40px;
+  grid-gap: 50px;
+  display: -ms-grid;
+  display: grid;
+}
+
+@media (max-width: 768px) {
+  .c-product-and-service__block-cards {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .c-card {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .c-card:first-child {
+    margin-top: 0;
+  }
+}
+
+.c-card__image {
+  max-width: 100px;
+}
+
+@media (max-width: 768px) {
+  .c-card__image {
+    margin: 0 auto;
+  }
+}
+
+.c-card__title {
+  color: #ee4248;
+  font-weight: 500;
+  margin-top: 20px;
+  font-size: 28px;
+}
+
+@media (max-width: 480px) {
+  .c-card__title {
+    font-size: 24px;
+  }
+}
+
+.c-card__desc {
+  color: #30444e;
+  min-height: 160px;
+  line-height: 30px;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+  .c-card__desc {
+    min-height: 210px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-card__desc {
+    margin: 15px auto;
+    max-width: 450px;
+    min-height: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .c-card__desc {
+    font-size: 16px;
+  }
+}
+
 .e-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -914,4 +1016,9 @@ h6 {
   .e-button {
     height: 35px;
   }
+}
+
+.e-button--card {
+  padding: 0 16px;
+  height: 40px;
 }

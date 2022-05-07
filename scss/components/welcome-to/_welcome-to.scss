@@ -10,6 +10,9 @@
   }
   &__block {
     max-width: 575px;
+    @include media('<=tablet') {
+      max-width: 1024px;
+    }
   }
   &__title {
     line-height: 40px;

@@ -1,0 +1,42 @@
+.c-card {
+  @include media('<=tablet') {
+    text-align: center;
+    margin-top: 50px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &__image {
+    max-width: 100px;
+    @include media('<=tablet') {
+      margin: 0 auto;
+    }
+  }
+  &__title {
+    color: $c-carmine-pink;
+    font-weight: 500;
+    margin-top: 20px;
+    font-size: 28px;
+    @include media('<=phone') {
+      font-size: 24px;
+    }
+  }
+  &__desc {
+    color: $c-charcoal;
+    min-height: 160px;
+    line-height: 30px;
+    margin-top: 15px;
+    font-size: 18px;
+    @include media('<=desktop') {
+      min-height: 210px;
+    }
+    @include media('<=tablet') {
+      margin: 15px auto;
+      max-width: 450px;
+      min-height: 0px;
+    }
+    @include media('<=phone') {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,35 +1,29 @@
 .c-navigation {
-  @include media('<=940px') {
-    background-color: $c-gunmetal;
-    position: fixed;
-    display: none;
-    width: 300px;
-    bottom: 0;
-    right: 0;
-    top: 0;
-  }
-  @include media('<=phone') {
-    width: auto;
-    left: 0;
-  }
-  &--show {
-    display: block;
-  }
+  z-index: 100;
   &__list {
     align-items: center;
     display: flex;
     @include media('<=940px') {
+      background-color: $c-gunmetal;
       flex-direction: column;
-      margin-top: 90px;
+      padding-top: 100px;
+      text-align: center;
+      position: fixed;
+      transition: 0.3s;
+      height: 100vh;
+      right: -100%;
+      z-index: 11;
+      width: 300px;
+      top: 0;
+    }
+    @include media('<=phone') {
+      width: 100%;
+    }
+    &--active {
+      right: 0;
     }
   }
   &__item {
     margin-right: 40px;
-    @include media('<=940px') {
-      margin: 0 0 5px 0;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
   }
 }

@@ -1,5 +1,8 @@
 .e-link {
   display: flex;
+  &:hover {
+    color: $c-carmine-pink;
+  }
   &--nav {
     color: rgba($c-gunmetal, 0.8);
     padding: 5px;

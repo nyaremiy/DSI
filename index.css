@@ -482,7 +482,7 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 1;
+  z-index: 11;
 }
 
 @media (max-width: 940px) {
@@ -494,6 +494,10 @@ h6 {
 .c-header__icon {
   color: rgba(38, 50, 56, 0.8);
   font-size: 20px;
+}
+
+.c-header__icon:hover {
+  color: #ee4248;
 }
 
 .c-header__icon--active {
@@ -509,27 +513,8 @@ h6 {
   display: flex;
 }
 
-@media (max-width: 940px) {
-  .c-navigation {
-    background-color: #263238;
-    position: fixed;
-    display: none;
-    width: 300px;
-    bottom: 0;
-    right: 0;
-    top: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .c-navigation {
-    width: auto;
-    left: 0;
-  }
-}
-
-.c-navigation--show {
-  display: block;
+.c-navigation {
+  z-index: 100;
 }
 
 .c-navigation__list {
@@ -543,32 +528,70 @@ h6 {
 
 @media (max-width: 940px) {
   .c-navigation__list {
+    background-color: #263238;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 90px;
+    padding-top: 100px;
+    text-align: center;
+    position: fixed;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    height: 100vh;
+    right: -100%;
+    z-index: 11;
+    width: 300px;
+    top: 0;
   }
+}
+
+@media (max-width: 480px) {
+  .c-navigation__list {
+    width: 100%;
+  }
+}
+
+.c-navigation__list--active {
+  right: 0;
 }
 
 .c-navigation__item {
   margin-right: 40px;
 }
 
-@media (max-width: 940px) {
-  .c-navigation__item {
-    margin: 0 0 5px 0;
-  }
-}
-
-.c-navigation__item:last-child {
-  margin-right: 0;
-}
-
 .c-burger {
+  cursor: pointer;
   position: fixed;
   display: none;
+  display: none;
   right: 12px;
+  z-index: 99;
+  top: 35px;
+}
+
+.c-burger--active {
+  z-index: 99;
+}
+
+.c-burger--active .c-burger__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.c-burger--active .c-burger__bar:nth-child(1) {
+  -webkit-transform: translateY(8px) rotate(45deg);
+          transform: translateY(8px) rotate(45deg);
+  background-color: #fff;
+}
+
+.c-burger--active .c-burger__bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+          transform: translateY(-8px) rotate(-45deg);
+  background-color: #fff;
+}
+
+.c-burger--active .icon {
+  color: #fff;
 }
 
 @media (max-width: 940px) {
@@ -577,65 +600,20 @@ h6 {
   }
 }
 
-.c-burger__wrapper {
-  position: relative;
-  cursor: pointer;
-  height: 20px;
-  width: 30px;
+@media (max-width: 480px) {
+  .c-burger {
+    top: 25px;
+  }
 }
 
-.c-burger__line {
-  border-radius: 10px;
-  background-color: rgba(38, 50, 56, 0.8);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  left: 50%;
-  top: 50%;
-}
-
-.c-burger__line::after {
-  content: '';
-  border-radius: 10px;
-  background-color: rgba(38, 50, 56, 0.8);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  top: 8px;
-}
-
-.c-burger__line::before {
-  content: '';
-  background-color: rgba(38, 50, 56, 0.8);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border-radius: 10px;
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  top: -8px;
-}
-
-.c-burger--active .c-burger__line {
-  background-color: transparent;
-}
-
-.c-burger--active .c-burger__line::after {
-  background-color: #fff;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  top: 0;
-}
-
-.c-burger--active .c-burger__line::before {
-  background-color: #fff;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  top: 0;
+.c-burger__bar {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #263238;
+  margin: 5px auto;
+  display: block;
+  height: 3px;
+  width: 25px;
 }
 
 .c-banner__wrapper {
@@ -1079,10 +1057,29 @@ h6 {
   }
 }
 
+.c-full-screen {
+  display: none;
+}
+
+.c-full-screen--show {
+  background-color: rgba(38, 50, 56, 0.3);
+  position: fixed;
+  display: block;
+  z-index: 10;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
 .e-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.e-link:hover {
+  color: #ee4248;
 }
 
 .e-link--nav {

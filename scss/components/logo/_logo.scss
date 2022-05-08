@@ -26,7 +26,8 @@
       color: $c-gunmetal;
     }
     @include media('<=phone') {
-      display: none;
+      line-height: 7px;
+      font-size: 6px;
     }
   }
 }

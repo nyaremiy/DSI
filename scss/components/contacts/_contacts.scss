@@ -1,0 +1,57 @@
+.c-contacts {
+  &__wrapper {
+    align-items: flex-end;
+    padding-bottom: 25px;
+    color: $c-gunmetal;
+    padding-top: 35px;
+    display: flex;
+    @include media('<=phone') {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+  &__location {
+    margin-right: 50px;
+  }
+  &__logo {
+    max-width: 120px;
+  }
+  &__subtitle {
+    margin-bottom: 10px;
+    font-weight: 500;
+    margin-top: 20px;
+    font-size: 18px;
+    @include media('<=tablet') {
+      margin-bottom: 5px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    @include media('<=phone') {
+      font-size: 14px;
+    }
+  }
+  &__info {
+    line-height: 26px;
+    font-weight: 300;
+    font-size: 18px;
+    @include media('<=tablet') {
+      line-height: 22px;
+      font-size: 12px;
+    }
+  }
+  &__title {
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 24px;
+    @include media('<=tablet') {
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+    @include media('<=phone') {
+      margin-top: 20px;
+    }
+    @include media('<=phone') {
+      font-size: 16px;
+    }
+  }
+}

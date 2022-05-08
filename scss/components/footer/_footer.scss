@@ -1,0 +1,16 @@
+.c-footer {
+  background-color: $c-carmine-pink;
+  &__wrapper {
+    padding-bottom: 20px;
+    text-align: center;
+    padding-top: 20px;
+    color: $c-white;
+    font-size: 18px;
+    @include media('<=tablet') {
+      font-size: 14px;
+    }
+    @include media('<=phone') {
+      font-size: 10px;
+    }
+  }
+}

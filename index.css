@@ -448,7 +448,8 @@ h6 {
 
 @media (max-width: 480px) {
   .c-logo__item {
-    display: none;
+    line-height: 7px;
+    font-size: 6px;
   }
 }
 
@@ -960,6 +961,121 @@ h6 {
 @media (max-width: 480px) {
   .c-card__desc {
     font-size: 16px;
+  }
+}
+
+.c-contacts__wrapper {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 25px;
+  color: #263238;
+  padding-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 480px) {
+  .c-contacts__wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.c-contacts__location {
+  margin-right: 50px;
+}
+
+.c-contacts__logo {
+  max-width: 120px;
+}
+
+.c-contacts__subtitle {
+  margin-bottom: 10px;
+  font-weight: 500;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .c-contacts__subtitle {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .c-contacts__subtitle {
+    font-size: 14px;
+  }
+}
+
+.c-contacts__info {
+  line-height: 26px;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .c-contacts__info {
+    line-height: 22px;
+    font-size: 12px;
+  }
+}
+
+.c-contacts__title {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .c-contacts__title {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .c-contacts__title {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .c-contacts__title {
+    font-size: 16px;
+  }
+}
+
+.c-footer {
+  background-color: #ee4248;
+}
+
+.c-footer__wrapper {
+  padding-bottom: 20px;
+  text-align: center;
+  padding-top: 20px;
+  color: #fff;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .c-footer__wrapper {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .c-footer__wrapper {
+    font-size: 10px;
   }
 }
 

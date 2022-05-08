@@ -560,6 +560,12 @@ h6 {
   margin-right: 40px;
 }
 
+@media (max-width: 940px) {
+  .c-navigation__item {
+    margin: 0 0 10px 0;
+  }
+}
+
 .c-burger {
   cursor: pointer;
   position: fixed;

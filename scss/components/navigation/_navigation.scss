@@ -25,5 +25,8 @@
   }
   &__item {
     margin-right: 40px;
+    @include media('<=940px') {
+      margin: 0 0 10px 0;
+    }
   }
 }

@@ -6,9 +6,10 @@
     @include media('<=940px') {
       background-color: $c-gunmetal;
       flex-direction: column;
+      padding-bottom: 100px;
       padding-top: 100px;
       text-align: center;
-      overflow-y: auto;
+      overflow-y: scroll;
       position: fixed;
       transition: 0.3s;
       height: 100vh;
